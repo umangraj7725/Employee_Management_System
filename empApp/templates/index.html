@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Employee Management - Simplify Your Workforce</title>
+{% endblock title %}
+
+{% block main %}
+<div class="container-fluid hero-banner py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 ps-5">
+      <h1 class="display-4 fw-bold mb-3">Empower Your Workforce, <br> Streamline Operations</h1>
+      <p class="lead fs-4">
+        The comprehensive Employee Management System designed to boost team performance and make HR a breeze.
+      </p>
+      <a href="{% url 'allemps' %}" class="btn btn-primary px-4 py-2 mt-3">View All Employees</a>
+    </div>
+    <div class="col-md-6 d-none d-md-block">
+      <img src="{% static 'images/emp.png' %}" alt="Employee Management Hero Image" class="img-fluid rounded-end">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-3 mb-3">
+      <div class="card text-center border-primary">
+        <div class="card-header bg-primary text-white">
+          <i class="bi bi-people fs-1"></i>
+          <h5 class="card-title mt-2">Manage Employees</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Maintain a centralized database, track attendance, and gain real-time insights.</p>
+          <a href="{% url 'allemps' %}" class="btn btn-primary px-3">View All</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card text-center border-success">
+        <div class="card-header bg-success text-white">
+          <i class="bi bi-person-plus fs-1"></i>
+          <h5 class="card-title mt-2">Add New Employees</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Simplify onboarding with a streamlined process and role-based permissions.</p>
+          <a href="{% url 'addEmp' %}" class="btn btn-success px-3">Add an Employee</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card text-center border-warning">
+        <div class="card-header bg-warning text-white">
+          <i class="bi bi-funnel fs-1"></i>
+          <h5 class="card-title mt-2">Filter & Search employee</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Find a specific employees using ID, name, department, or other criteria.</p>
+          <a href="{% url 'find' %}" class="btn btn-warning px-3">Filter Employees</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card text-center border-danger">
+        <div class="card-header bg-danger text-white">
+          <i class="bi bi-gear fs-1"></i>
+          <h5 class="card-title mt-2">Edit Employee Details</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Update employee information, manage roles, and ensure data accuracy.</p>
+          <a href="{% url 'rm' %}" class="btn btn-danger px-3">Edit Employees</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock main %}
